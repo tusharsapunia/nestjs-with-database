@@ -5,6 +5,7 @@ import { AppService } from './app.service.js';
 import { MongooseModule } from '@nestjs/mongoose';
 import { StudentModule } from './student/student.module.js';
 import { WorkerModule } from './worker/worker.module.js';
+import { EmployeeModule } from './employee/employee.module.js';
 
 @Module({
   imports: [
@@ -12,6 +13,7 @@ import { WorkerModule } from './worker/worker.module.js';
     MongooseModule.forRoot(process.env.MONGO_URL!),
     StudentModule,
     WorkerModule,
+    EmployeeModule,
   ],
   controllers: [AppController],
   providers: [AppService],
